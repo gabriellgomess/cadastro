@@ -1,0 +1,38 @@
+.card--props{
+    width: 250px !important;
+    height: 390px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.container--cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;  
+}
+.container--buttons{
+    display: flex;
+    justify-content: center;
+}
+.avatar{
+    margin: 0 auto;
+    width: 110px !important;
+    height: 110px !important;
+}
+.sexo{
+    text-transform: capitalize;
+}
+.last--change{
+    display: flex;
+    align-items: center;
+}
+.divider{
+    margin: 6px 0;
+}
+@media only screen and (max-width: 1200px){
+    .container--cards{
+        justify-content: center;
+    }
+}

@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import ResponsiveAppBar from './components/appBar/appBar';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Pessoas from './pages/Pessoas';
+import Mensagens from './pages/Mensagens';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-function App() {
+
+const App = () => {
+  const darkTheme = createTheme({
+    palette: {
+      mode: 'dark',
+    },
+  });
+  
   return (
+    <ThemeProvider theme={darkTheme}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <ResponsiveAppBar />
+        <div className='main'>
+            <Routes>
+                <Route exact path='/cadastro/' element={<Home />} />
+                <Route path='/cadastro/Pessoas' element={<Pessoas />} />
+                <Route path='/cadastro/Mensagens' element={<Mensagens />} />
+            </Routes>     
+        
+        </div>
+
     </div>
+    </ThemeProvider>
   );
 }
 

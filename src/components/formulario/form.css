@@ -1,0 +1,68 @@
+.container--form{
+    margin: 30px;
+}
+.form{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* border: 1px solid grey; */
+    padding: 20px;
+    /* border-radius: 10px; */
+}
+.input-text{
+    width: 100%;
+    margin-top: 10px !important;
+}
+.wrapper--form{
+    display: flex;    
+}
+.input--form{
+    margin-top: 10px;
+}
+.button--cadastrar{
+    margin-top: 10px !important;
+}
+.container--sexo, .container--data{
+    margin-top: 10px !important;
+}
+.in--line{
+    display: flex;
+    align-items: center;
+}
+.container--nasc{
+    width: 165px;
+}
+
+@media only screen and (max-width: 1200px){
+    .wrapper--form{
+        display: flex;
+        flex-direction: column;
+    }
+    .container--form{
+        margin: 30px auto;
+    }
+}
+.title_h5{
+    display: flex;
+    align-items: center;
+}
+@media only screen and (max-width: 630px){  
+    .container--form{
+        width: 95%;
+    }
+    .in--line{
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .input-text{
+        width: 100%;
+    }
+    .form{
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+    }
+    
+}
